@@ -1,0 +1,28 @@
+{
+  "name": "papertheme3",
+  "version": "3.0.0",
+  "description": "Paper Theme for blog wordpress.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnondora/wordpress-paper-theme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "material",
+    "design"
+  ],
+  "author": "Arnon Puitrakul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arnondora/wordpress-paper-theme/issues"
+  },
+  "homepage": "https://github.com/arnondora/wordpress-paper-theme#readme",
+  "devDependencies": {
+    "webpack": "^2.5.1"
+  }
+}
