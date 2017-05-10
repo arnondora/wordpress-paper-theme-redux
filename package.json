@@ -4,7 +4,8 @@
   "description": "Paper Theme for blog wordpress.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "echo \"Cleaning Compiled Files\" && rm -r -f css js && echo \"Done!\""
   },
   "repository": {
     "type": "git",
