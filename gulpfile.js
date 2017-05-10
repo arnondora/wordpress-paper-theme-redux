@@ -28,6 +28,6 @@ gulp.task('concatJS', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('./sass/*.scss', ['concatMain','concatJS']);
+  gulp.watch('./src', ['concatMain','concatJS']);
   // Other watchers
 });
