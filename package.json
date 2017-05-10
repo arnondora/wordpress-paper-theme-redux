@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "echo \"Cleaning Compiled Files\" && rm -r -f css js dist && echo \"Done!\"",
-    "dev": "npm run clean && webpack -d --watch",
-    "prod": "npm run clean && webpack -p --watch"
+    "build": "npm run clean && gulp",
+    "dev": "npm run clean && gulp watch",
   },
   "repository": {
     "type": "git",
@@ -26,14 +26,17 @@
   },
   "homepage": "https://github.com/arnondora/wordpress-paper-theme#readme",
   "devDependencies": {
-    "css-loader": "^0.28.1",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "node-sass": "^4.5.2",
-    "sass-loader": "^6.0.4",
-    "style-loader": "^0.17.0",
-    "webpack": "^2.5.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rev": "^7.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^2.1.2",
+    "uglify": "^0.1.5"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "materialize-css": "^0.98.2"
   }
 }
