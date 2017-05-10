@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "echo \"Cleaning Compiled Files\" && rm -r -f css js && echo \"Done!\""
+    "clean": "echo \"Cleaning Compiled Files\" && rm -r -f css js && echo \"Done!\"",
+    "dev": "npm run clean && webpack -d --watch",
+    "prod": "npm run clean && webpack -p --watch"
   },
   "repository": {
     "type": "git",
