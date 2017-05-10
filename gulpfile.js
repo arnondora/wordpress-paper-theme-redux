@@ -4,10 +4,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
+var gulpCopy = require('gulp-copy');
 
 
-
-gulp.task('default',['concatMain', 'concatJS'], function() {
+gulp.task('default',['concatMain', 'concatJS', 'copyFont'], function() {
 });
 
 gulp.task('concatMain', function() {
@@ -27,7 +27,12 @@ gulp.task('concatJS', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+gulp.task('copyFont', function () {
+  return gulp.src(['./node_modules/materialize-css/fonts/roboto/*'])
+  .pipe(gulp.dest('./dist/fonts/roboto'))
+});
+
 gulp.task('watch', function(){
-  gulp.watch('./src', ['concatMain','concatJS']);
+  gulp.watch('./src', ['concatMain','concatJS', 'copyFont']);
   // Other watchers
 });
