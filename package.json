@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "echo \"Cleaning Compiled Files\" && rm -r -f css js dist && echo \"Done!\"",
     "build": "npm run clean && gulp",
-    "dev": "npm run clean && gulp watch",
+    "dev": "npm run clean && gulp watch"
   },
   "repository": {
     "type": "git",
