@@ -1,14 +1,25 @@
 //Font Size Settings
 h1,h2,h3,h4,h5,h6,p
 {
+  color: $text-heading-colour;
+}
+p
+{
   color: $text-disabled-colour;
 }
+
+h1 {font-size: 37.32px;}
+h2 {font-size: 31.1px;}
+h3 {font-size: 25.92px;}
+h4 {font-size: 21.6px;}
+p {font-size: 18px;}
 
 blockquote
 {
   border-left: 5px solid $primary-colour;
   font-family: $font-family-stack;
   color: $text-disabled-colour;
+  font-size: 18px;
 }
 
 .link-no-decorate
