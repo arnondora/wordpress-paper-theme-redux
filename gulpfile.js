@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');
 var gulpCopy = require('gulp-copy');
 
 
-gulp.task('default',['concatMain', 'concatJS', 'copyFont', 'copyAwesomeFont'], function() {
+gulp.task('default',['concatMain', 'concatJS', 'copySocialIcons', 'copyFont', 'copyAwesomeFont'], function() {
 });
 
 gulp.task('concatMain', function() {
@@ -37,7 +37,12 @@ gulp.task('copyAwesomeFont', function () {
   .pipe(gulp.dest('./dist/fonts'))
 });
 
+gulp.task('copySocialIcons', function () {
+  return gulp.src(['./src/img/social-icon/*'])
+  .pipe(gulp.dest('./dist/img/social-icon'))
+});
+
 gulp.task('watch', function(){
-  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS', 'copyFont','copyAwesomeFont']);
+  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS', 'copySocialIcons', 'copyFont','copyAwesomeFont']);
   // Other watchers
 });
