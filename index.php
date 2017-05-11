@@ -1,6 +1,6 @@
 <?php get_header()?>
 
-<main>
+<main class = "index">
   <!-- Content Goes Here -->
   <div class = "container">
 

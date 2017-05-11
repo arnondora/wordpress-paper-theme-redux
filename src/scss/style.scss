@@ -30,6 +30,24 @@ nav
   padding-top: 65px;
 }
 
+header, main, footer
+{
+  padding-left: 150px;
+}
+
+.index > .container
+{
+  width: 90%;
+}
+
+@media only screen and (max-width : 992px)
+{
+  header, main, footer
+  {
+    padding-left: 0;
+  }
+}
+
 //Search Box
 
 .searchbox-outer
