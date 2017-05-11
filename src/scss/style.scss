@@ -4,3 +4,47 @@
 
 @import "variables";
 @import "font";
+
+// Footer
+body
+{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main
+{
+  flex: 1 0 auto;
+}
+
+.page-footer
+{
+  background-color: $primary-colour;
+  padding-bottom: 20px;
+}
+
+.footer-contact-list
+{
+  margin-bottom: 0px !important;
+}
+
+.footer-contact-list > li
+{
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.footer-contact-list > li:first
+{
+  margin-left: 0px;
+}
+
+.page-footer
+{
+    .row
+    {
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+}
