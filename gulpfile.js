@@ -20,7 +20,7 @@ gulp.task('concatMain', function() {
 });
 
 gulp.task('concatJS', function() {
-  return gulp.src(['./node_modules/materialize-css/dist/js/materialize.min.js', './src/js/*.js'])
+  return gulp.src(['./node_modules/jquery/dist/jquery.js','./node_modules/materialize-css/dist/js/materialize.min.js', './src/js/*.js'])
     .pipe(concat('PaperTheme.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write("./dist/js"))
@@ -28,7 +28,7 @@ gulp.task('concatJS', function() {
 });
 
 gulp.task('copyFont', function () {
-  return gulp.src(['./node_modules/materialize-css/fonts/roboto/*'])
+  return gulp.src(['./node_modules/materialize-css/fonts/roboto/*','./node_modules/font-awesome/fonts/*'])
   .pipe(gulp.dest('./dist/fonts/roboto'))
 });
 
