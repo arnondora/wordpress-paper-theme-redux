@@ -16,6 +16,12 @@ blockquote
   text-decoration-style: none;
 }
 
+//Side Nav Font Style
+.sidebar-button-inner
+{
+  color: $text-disabled-colour !important;
+}
+
 // Footer Font Style
 .footer-font-colour
 {

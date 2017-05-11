@@ -8,7 +8,7 @@
 //Main Page Background Colour
 html
 {
-  background-color: white; 
+  background-color: white;
 }
 
 // Head Nav
@@ -17,6 +17,18 @@ nav
   background-color: $primary-colour !important;
 }
 
+// Side Nav
+.side-nav li a
+{
+  display: block;
+}
+
+.side-nav
+{
+  background-color: $home-background-colour;
+  color: $menubar-text-colour;
+  padding-top: 65px;
+}
 // Footer
 body
 {
