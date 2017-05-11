@@ -10,3 +10,14 @@ blockquote
   font-family: $font-family-stack;
   color: $text-disabled-colour;
 }
+
+.link-no-decorate
+{
+  text-decoration-style: none;
+}
+
+// Footer Font Style
+.footer-font-colour
+{
+  color: white;
+}
