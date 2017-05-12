@@ -4,10 +4,10 @@
         <div class = "row footer-contact">
           <center>
             <ul class = "footer-contact-list">
-              <li><a href = "https://www.facebook.com/arnondora" class = "link-no-decorate"><img src = "<?php echo get_template_directory_uri() . '/dist/img/social-icon/Facebook.svg'?>" class = "footer-font-colour"></a></li>
-              <li><a href = "https://www.twitter.com/arnondora" class = "link-no-decorate"><img src = "<?php echo get_template_directory_uri() . '/dist/img/social-icon/Twitter.svg'?>" class = "footer-font-colour"></a></li>
-              <li><a href = "https://www.plus.google.com/+arnonpuitrakul" class = "link-no-decorate"><img src = "<?php echo get_template_directory_uri() . '/dist/img/social-icon/GooglePlus.svg'?>" class = "footer-font-colour"></a></li>
-              <li><a href = "mailto:me@arnondora.in.th" class = "link-no-decorate"><img src = "<?php echo get_template_directory_uri() . '/dist/img/social-icon/Email.svg'?>" class = "footer-font-colour"></a></li>
+              <li><a href = "https://www.facebook.com/arnondora" class = "link-no-decorate"><i class = "fa fa-facebook-f fa-3x footer-font-colour"></i></li>
+              <li><a href = "https://www.twitter.com/arnondora" class = "link-no-decorate"><i class = "fa fa-twitter fa-3x footer-font-colour"></i></a></li>
+              <li><a href = "https://www.plus.google.com/+arnonpuitrakul" class = "link-no-decorate"><i class = "fa fa-google-plus fa-3x footer-font-colour"></i></a></li>
+              <li><a href = "mailto:me@arnondora.in.th" class = "link-no-decorate"><i class = "fa fa-envelope fa-3x footer-font-colour"></i></a></li>
             </ul>
           </center>
         </div>
