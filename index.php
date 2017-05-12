@@ -2,36 +2,141 @@
 
 <main <?php body_class()?>>
   <!-- Content Goes Here -->
-  <div class = "container">
+  <div class = "home-container">
 
-    <!-- Search Box  -->
-    <div class = "row">
-      <div class = "searchbox-outer">
-        <form method = "post">
-          <div class="input-field">
-            <i class = "fa fa-search search-font-color prefix" style = "margin-top:8px"></i>
-            <input type = "text" placeholder="Search something new!">
-          </div>
-        </form>
+      <!-- Search Box  -->
+      <div class = "row">
+        <div class = "searchbox-outer">
+          <form method = "post">
+            <div class="input-field">
+              <i class = "fa fa-search search-font-color prefix" style = "margin-top:8px"></i>
+              <input type = "text" placeholder="Search something new!">
+            </div>
+          </form>
+        </div>
       </div>
+
+      <div class = "row hide-on-med-and-down">
+        <?php
+          for($i=0; $i<=1; $i++)
+          {
+            $counter = 0;
+            if(have_posts())
+            {
+        ?>
+                <div class = "col s12 m12 l6">
+                <?php
+                  while (have_posts())
+                  {
+                    the_post();
+                    $counter++;
+                    if ($counter%2 == $i) continue;
+                ?>
+                  <div class = "row">
+                    <div class = "card index-card-margin-<?php if($i == 0) echo 'left'; else echo 'right';?>">
+                      <?php if (has_post_thumbnail()) { ?>
+                        <div class = "card-image">
+                          <img src = "<?php the_post_thumbnail_url() ?>">
+                          <!-- Sharing Button -->
+                          <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
+                              <a class="btn-floating btn-large social-btn-share">
+                                <i class="fa fa-share-alt"></i>
+                              </a>
+                              <ul>
+                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                          </div>
+                        </div>
+                      <?php } ?>
+
+                      <div class = "card-content">
+                        <?php if (has_post_thumbnail() == false) {?>
+                          <!-- Sharing Button -->
+                          <div style = "position: relative; margin-top:10px;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
+                              <a class="btn-floating btn-large social-btn-share">
+                                <i class="fa fa-share-alt"></i>
+                              </a>
+                              <ul>
+                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                          </div>
+                        <?php } ?>
+                        <h1><a class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <p><?php the_excerpt();?></p>
+                      </div>
+                    </div>
+                  </div>
+                <?php
+                  }
+                ?>
+                </div>
+          <?php
+            }
+          }
+        ?>
     </div>
 
-    <?php if (is_home()):?>
-    <h1 class = "scale-transition">Hello PaperTheme 3.0 !</h1>
-    <blockquote>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </blockquote>
-    <?php endif?>
+    <div class = "row hide-on-large-only">
+        <?php
+            if(have_posts())
+            {
+        ?>
+                <div class = "col s12 m12 l6">
+                <?php
+                  while (have_posts())
+                  {
+                    the_post();
+                ?>
+                  <div class = "row">
+                    <div class = "card">
+                      <?php if (has_post_thumbnail()) { ?>
+                        <div class = "card-image">
+                          <img src = "<?php the_post_thumbnail_url() ?>">
+                          <!-- Sharing Button -->
+                          <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
+                              <a class="btn-floating btn-large social-btn-share">
+                                <i class="fa fa-share-alt"></i>
+                              </a>
+                              <ul>
+                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                          </div>
+                        </div>
+                      <?php } ?>
 
-    <?php
-      if(have_posts() ):
-        while(have_posts() ): the_post();?>
-          <h3><?php the_title();?></h3>
-          <small>Posted on <?php the_time('F j, Y') ?> | <?php the_category()?></small>
-          </p><?php the_content();?></p>
-          <hr>
-        <?php endwhile;
-      endif;?>
+                      <div class = "card-content">
+                        <?php if (has_post_thumbnail() == false) {?>
+                          <!-- Sharing Button -->
+                          <div style = "position: relative; margin-top:10px;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
+                              <a class="btn-floating btn-large social-btn-share">
+                                <i class="fa fa-share-alt"></i>
+                              </a>
+                              <ul>
+                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                              </ul>
+                          </div>
+                        <?php } ?>
+                        <h1><a class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <p><?php the_excerpt();?></p>
+                      </div>
+                    </div>
+                  </div>
+                <?php
+                  }
+                ?>
+                </div>
+          <?php
+            }
+        ?>
+    </div>
   </div>
 </main>
 

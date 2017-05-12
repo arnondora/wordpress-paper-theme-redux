@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "font";
+@import "social-button";
 
 //Main Page Background Colour
 html
@@ -91,6 +92,31 @@ header, main, footer
 .searchbox-outer .input-field .prefix.active
 {
      color: $text-heading-colour;
+}
+
+//Index
+
+.home-container
+{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.index-card-margin-bottom
+{
+  margin-bottom: 35px;
+}
+
+.index-card-margin-left
+{
+  @extend .index-card-margin-bottom;
+  margin-right: 25px;
+}
+
+.index-card-margin-right
+{
+  @extend .index-card-margin-bottom;
+  margin-left: 25px;
 }
 
 // Footer

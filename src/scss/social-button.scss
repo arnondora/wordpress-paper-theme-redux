@@ -1,0 +1,28 @@
+.social-btn-main-font
+{
+  color: white;
+}
+
+.social-btn-share
+{
+  @extend .social-btn-main-font;
+  background-color: $primary-colour;
+}
+
+.social-btn-facebook
+{
+  @extend .social-btn-main-font;
+  background-color: $facebook-colour;
+}
+
+.social-btn-twitter
+{
+  @extend .social-btn-main-font;
+  background-color: $twitter-colour;
+}
+
+.social-btn-google-plus
+{
+  @extend .social-btn-main-font;
+  background-color: $google-plus-colour;
+}
