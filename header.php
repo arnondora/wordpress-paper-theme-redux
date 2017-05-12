@@ -5,7 +5,7 @@
     <title>PaperTheme 3.0</title>
     <?php wp_head() ?>
   </head>
-  <body <?php body_class()?> >
+  <body>
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">[A(;]</a>
