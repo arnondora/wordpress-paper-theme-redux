@@ -18,27 +18,14 @@
     <section>
       <div id="slide-out" class="side-nav fixed left-aligned">
         <center>
-          <ul>
-            <li>
-              <a href = "#">
-                <span><i class = "fa fa-home fa-2x"></i></span>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href = "#">
-                <span><i class = "fa fa-user fa-2x"></i></span>
-                <span>about:me</span>
-              </a>
-            </li>
-            <li>
-              <a href = "#">
-                <span><i class = "fa fa-book fa-2x"></i></span>
-                <span>Tutorial</span>
-              </a>
-            </li>
-            <?php wp_nav_menu('primary');?>
-          </ul>
+          <?php wp_nav_menu(
+            [
+              'menu' => 'primary',
+              'menu_class' => '',
+              'container' => '',
+              'walker' => new papertheme_primary_menu_nav_walker()
+            ]
+          );?>
         </center>
       </div>
     </section>

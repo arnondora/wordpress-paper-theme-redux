@@ -22,9 +22,14 @@ nav
 .side-nav li a
 {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 70px;
+  padding-top: 15px;
+  padding-bottom: 90px;
   color: $menubar-text-colour;
+}
+
+.side-nav li:first-child
+{
+  margin-top:30px;
 }
 
 .side-nav
