@@ -20,23 +20,24 @@
         <center>
           <ul>
             <li>
-              <a class = "sidebar-button-inner" href = "#">
+              <a href = "#">
                 <span><i class = "fa fa-home fa-2x"></i></span>
                 <span>Home</span>
               </a>
             </li>
             <li>
-              <a class = "sidebar-button-inner" href = "#">
+              <a href = "#">
                 <span><i class = "fa fa-user fa-2x"></i></span>
                 <span>about:me</span>
               </a>
             </li>
             <li>
-              <a class = "sidebar-button-inner" href = "#">
+              <a href = "#">
                 <span><i class = "fa fa-book fa-2x"></i></span>
                 <span>Tutorial</span>
               </a>
             </li>
+            <?php wp_nav_menu('primary');?>
           </ul>
         </center>
       </div>
