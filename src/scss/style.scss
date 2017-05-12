@@ -21,6 +21,8 @@ nav
 .side-nav li a
 {
   display: block;
+  padding-top: 10px;
+  padding-bottom: 70px;
 }
 
 .side-nav
@@ -38,6 +40,13 @@ header, main, footer
 .index > .container
 {
   width: 90%;
+}
+
+.sidebar-button-inner > span > i
+{
+  display:block;
+  float:none;
+  width:100%;
 }
 
 @media only screen and (max-width : 992px)

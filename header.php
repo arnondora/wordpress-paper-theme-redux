@@ -19,9 +19,24 @@
       <div id="slide-out" class="side-nav fixed left-aligned">
         <center>
           <ul>
-            <li><a class = "sidebar-button-inner" href = "#">Home</a></li>
-            <li><a class = "sidebar-button-inner" href = "#">about:me</a></li>
-            <li><a class = "sidebar-button-inner" href = "#">Tutorial</a></li>
+            <li>
+              <a class = "sidebar-button-inner" href = "#">
+                <span><i class = "fa fa-home fa-2x"></i></span>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a class = "sidebar-button-inner" href = "#">
+                <span><i class = "fa fa-user fa-2x"></i></span>
+                <span>about:me</span>
+              </a>
+            </li>
+            <li>
+              <a class = "sidebar-button-inner" href = "#">
+                <span><i class = "fa fa-book fa-2x"></i></span>
+                <span>Tutorial</span>
+              </a>
+            </li>
           </ul>
         </center>
       </div>
