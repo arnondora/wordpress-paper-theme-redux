@@ -38,7 +38,8 @@ header, main, footer
   padding-left: 150px;
 }
 
-.index > .container
+//Change Container Width Only in homepage
+.home > .container
 {
   width: 90%;
 }
