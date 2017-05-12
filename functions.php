@@ -1,5 +1,16 @@
 <?php
 
+//Theme Bootstrap
+function papertheme_theme_setup()
+{
+  //Hook Theme Support List
+  add_theme_support('menus');
+
+  //Register Nav Menu
+  register_nav_menu('primary', 'Sidebar Navigation');
+}
+add_action('init', 'papertheme_theme_setup');
+
 //Function for enqueue all assets (including related stylesheet and javascript)
 function papertheme_enquque_assets()
 {
