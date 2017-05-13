@@ -1,0 +1,98 @@
+// Single Page
+.single-container
+{
+  margin:auto;
+  margin-top: 10px;
+  max-width: 700px;
+
+  @media only screen and (max-width : 993px)
+  {
+    margin: auto;
+    margin-top:10px;
+    width:90%;
+  }
+}
+
+.single-container-img
+{
+  @extend .single-container;
+
+  margin-top:30px;
+
+  @media only screen and (max-width : 993px)
+  {
+    margin-top:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width:100%;
+  }
+}
+
+// Single Page - Title Set
+.single-container > .title
+{
+  margin-bottom: 30px;
+}
+
+.single-container > .title > h1
+{
+  margin-bottom: 0px;
+}
+
+.single-container > .title > p
+{
+  margin-top:10px;
+}
+
+// Single Page Content Area Configuration
+.single-container-img > img
+{
+  max-height: 600px;
+  width:auto;
+  display: block;
+  margin: 0 auto;
+
+  @media only screen and (max-width : 993px)
+  {
+    width:100%;
+    height:auto;
+  }
+}
+
+.single-container > .content img
+{
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+// Single Page Tag Area
+.single-container > .content > .tags
+{
+  margin-top:20px;
+  margin-bottom: 25px;
+}
+
+// Tags
+.chip-tag
+{
+  @extend .link-no-decorate;
+  background-color: $primary-colour;
+
+  a
+  {
+    color: white;
+  }
+}
+
+.chip-category
+{
+  @extend .link-no-decorate;
+  background-color: $home-background-colour;
+
+  a
+  {
+    color: $text-heading-colour;
+  }
+}
