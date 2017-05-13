@@ -2,7 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>PaperTheme 3.0</title>
+    <title>
+      <?php if(is_home()) {?>
+        <?php bloginfo('name')?> - <?php bloginfo('description')?>
+      <?php } else {?>
+        <?php the_title() ?> - <?php bloginfo('name')?>
+      <?php } ?>
+    </title>
     <?php wp_head() ?>
   </head>
   <body>
