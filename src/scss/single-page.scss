@@ -22,8 +22,6 @@
   @media only screen and (max-width : 993px)
   {
     margin-top:0px;
-    margin-left: 0px;
-    margin-right: 0px;
     width:100%;
   }
 }
@@ -65,6 +63,41 @@
   height: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.wp-caption
+{
+  width: 100% !important;
+
+  img
+  {
+    margin-bottom: 5px !important;
+  }
+
+  .wp-caption-text
+  {
+    margin-top:0px;
+    text-align: center;
+    color: $menubar-text-colour !important;
+  }
+}
+
+iframe
+{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+pre
+{
+    color: $text-disabled-colour;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 // Single Page Tag Area
