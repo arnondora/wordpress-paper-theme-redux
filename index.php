@@ -16,6 +16,7 @@
         </div>
       </div>
 
+      <!-- For Desktop and Tablet Site -->
       <div class = "row hide-on-med-and-down">
         <?php
           for($i=0; $i<=1; $i++)
@@ -80,6 +81,7 @@
         ?>
     </div>
 
+    <!-- For Mobile Site -->
     <div class = "row hide-on-large-only">
         <?php
             if(have_posts())
