@@ -1,0 +1,51 @@
+// Error 404 Page
+.error404
+{
+  margin-top: 0px !important;
+}
+
+.error404 > body
+{
+  background-color: $primary-colour;
+}
+
+.error404 > body > main > .content-main
+{
+  display: flex;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top:35%;
+  width:50%;
+  height: auto;
+}
+
+.error404 > body > main > .content-main > .content
+{
+  margin-left: 30px;
+}
+
+.error404 > body > main > .content-main > svg
+{
+  margin-top: 30px;
+}
+
+.error404 > body > main > .content-main > .content > h1
+{
+  color: white !important;
+}
+.error404 > body > main > .content-main > .content > h2
+{
+  margin-top: -20px;
+  margin-bottom: 5px;
+  color: white !important;
+}
+
+.error404 > body > main > .content-main > .content > a
+{
+  margin-top: -10px;
+  color: white !important;
+}
