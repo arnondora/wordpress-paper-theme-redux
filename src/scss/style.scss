@@ -4,7 +4,11 @@
 
 @import "variables";
 @import "font";
+@import "side-nav";
+@import "search-box";
+@import "footer";
 @import "social-button";
+@import "index-page";
 @import "single-page";
 
 //Main Page Background Colour
@@ -17,154 +21,4 @@ html
 nav
 {
   background-color: $primary-colour !important;
-}
-
-// Side Nav
-.side-nav li a
-{
-  display: block;
-  padding-top: 15px;
-  padding-bottom: 90px;
-  color: $menubar-text-colour;
-}
-
-.side-nav li:first-child
-{
-  margin-top:30px;
-}
-
-.side-nav
-{
-  background-color: $home-background-colour;
-  color: $menubar-text-colour;
-  padding-top: 65px;
-}
-
-header, main, footer
-{
-  padding-left: 150px;
-}
-
-//Change Container Width Only in homepage
-.home > .container
-{
-  width: 90%;
-}
-
-.side-nav > center > ul > li > a > span > i
-{
-  display:block;
-  float:none;
-  width:100%;
-}
-
-@media only screen and (max-width : 992px)
-{
-  header, main, footer
-  {
-    padding-left: 0;
-  }
-}
-
-//Search Box
-
-.searchbox-outer
-{
-  margin-top: 30px;
-  background-color: $home-background-colour;
-  border-radius: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.searchbox-outer input
-{
-  border-bottom: none;
-  margin-bottom: 0px !important;
-  color: $text-heading-colour
-}
-
-.searchbox-outer input::placeholder
-{
-  color: $text-disabled-colour;
-}
-
-.searchbox-outer .input-field input[type=text]:focus
-{
-  border-bottom: 0px solid $home-background-colour;
-  box-shadow: 0 1px 0 0 $home-background-colour;
-}
-
-.searchbox-outer .input-field .prefix.active
-{
-     color: $text-heading-colour;
-}
-
-//Index
-
-.home-container
-{
-  margin: auto;
-  width: 94%;
-}
-
-.index-card-margin-bottom
-{
-  margin-bottom: 35px;
-}
-
-.index-card-margin-left
-{
-  @extend .index-card-margin-bottom;
-  margin-right: 25px;
-}
-
-.index-card-margin-right
-{
-  @extend .index-card-margin-bottom;
-  margin-left: 25px;
-}
-
-// Footer
-body
-{
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main
-{
-  flex: 1 0 auto;
-}
-
-.page-footer
-{
-  background-color: $primary-colour;
-  padding-bottom: 20px;
-}
-
-.footer-contact-list
-{
-  margin-bottom: 0px !important;
-}
-
-.footer-contact-list > li
-{
-  margin-left: 20px;
-  display: inline-block;
-}
-
-.footer-contact-list > li:first
-{
-  margin-left: 0px;
-}
-
-.page-footer
-{
-    .row
-    {
-      margin-top: 0px !important;
-      margin-bottom: 0px !important;
-    }
 }

@@ -1,0 +1,46 @@
+// Side Nav
+.side-nav li a
+{
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 90px;
+  color: $menubar-text-colour;
+}
+
+.side-nav li:first-child
+{
+  margin-top:30px;
+}
+
+.side-nav
+{
+  background-color: $home-background-colour;
+  color: $menubar-text-colour;
+  padding-top: 65px;
+}
+
+header, main, footer
+{
+  padding-left: 150px;
+}
+
+//Change Container Width Only in homepage
+.home > .container
+{
+  width: 90%;
+}
+
+.side-nav > center > ul > li > a > span > i
+{
+  display:block;
+  float:none;
+  width:100%;
+}
+
+@media only screen and (max-width : 992px)
+{
+  header, main, footer
+  {
+    padding-left: 0;
+  }
+}

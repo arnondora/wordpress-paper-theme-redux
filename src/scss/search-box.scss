@@ -1,0 +1,33 @@
+//Search Box
+
+.searchbox-outer
+{
+  margin-top: 30px;
+  background-color: $home-background-colour;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.searchbox-outer input
+{
+  border-bottom: none;
+  margin-bottom: 0px !important;
+  color: $text-heading-colour
+}
+
+.searchbox-outer input::placeholder
+{
+  color: $text-disabled-colour;
+}
+
+.searchbox-outer .input-field input[type=text]:focus
+{
+  border-bottom: 0px solid $home-background-colour;
+  box-shadow: 0 1px 0 0 $home-background-colour;
+}
+
+.searchbox-outer .input-field .prefix.active
+{
+     color: $text-heading-colour;
+}

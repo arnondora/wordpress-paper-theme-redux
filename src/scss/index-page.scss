@@ -1,0 +1,24 @@
+//Index
+
+.home-container
+{
+  margin: auto;
+  width: 94%;
+}
+
+.index-card-margin-bottom
+{
+  margin-bottom: 35px;
+}
+
+.index-card-margin-left
+{
+  @extend .index-card-margin-bottom;
+  margin-right: 25px;
+}
+
+.index-card-margin-right
+{
+  @extend .index-card-margin-bottom;
+  margin-left: 25px;
+}
