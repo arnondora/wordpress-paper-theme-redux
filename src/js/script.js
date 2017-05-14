@@ -5,3 +5,8 @@ $('.headernav-button-collapse').sideNav(
       draggable: true // Choose whether you can drag to open on touch screens
     }
 );
+
+// Init Parallax Effect for Page page
+$(document).ready(function(){
+  $('#page-parallax').parallax();
+});
