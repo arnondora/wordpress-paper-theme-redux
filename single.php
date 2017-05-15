@@ -26,6 +26,8 @@
         </ul>
       </div>
     </div>
+
+    <?php if (comments_open()) comments_template();?>
   </div>
 
   <!-- Sharing Button -->
