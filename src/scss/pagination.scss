@@ -1,0 +1,10 @@
+.post-pagination-btn
+{
+  background-color: $primary-colour;
+  color: white;
+}
+
+.post-pagination-btn:hover
+{
+  background-color: darken($primary-colour, 20%);
+}

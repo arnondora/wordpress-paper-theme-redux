@@ -28,6 +28,7 @@
           {
             for($i=0; $i<=$limit; $i++)
             {
+              wp_reset_query();
         ?>
                 <div class = "col s12 m12 l6">
                 <?php
@@ -154,6 +155,13 @@
             }
           ?>
     </div>
+
+    <!-- Pagination -->
+    <div class = "row">
+      <?php previous_posts_link('Newer Posts');?>
+      <?php next_posts_link('Older Posts');?>
+    </div>
+
   </div>
 </main>
 

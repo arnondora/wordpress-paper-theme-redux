@@ -25,6 +25,18 @@ function papertheme_enquque_assets()
 
 add_action( 'wp_enqueue_scripts', 'papertheme_enquque_assets' );
 
+// Filter For Page Pagination
+function papertheme_previous_post_pagination_filter() {
+    return 'class="pull-right waves-effect waves-light btn post-pagination-btn"';
+}
+add_filter('previous_posts_link_attributes', 'papertheme_previous_post_pagination_filter');
+
+function papertheme_next_post_pagination_filter() {
+    return 'class="pull-left waves-effect waves-light btn post-pagination-btn"';
+}
+add_filter('next_posts_link_attributes', 'papertheme_next_post_pagination_filter');
+
+
 // Filter For Primary menu
 class papertheme_primary_menu_nav_walker extends Walker_Nav_Menu
 {
