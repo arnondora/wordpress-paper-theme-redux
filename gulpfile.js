@@ -11,7 +11,7 @@ gulp.task('default',['concatMain', 'concatJS', 'copyFont', 'copyAwesomeFont'], f
 });
 
 gulp.task('concatMain', function() {
-  return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css','./node_modules/font-awesome/css/font-awesome.min.css', './src/scss/*.scss'])
+  return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css','./node_modules/font-awesome/css/font-awesome.min.css', './src/scss/style.scss'])
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(cleanCSS())
