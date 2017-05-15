@@ -7,6 +7,8 @@
         <?php bloginfo('name')?> - <?php bloginfo('description')?>
       <?php } elseif (is_search()) {?>
         Search Result for <?php echo get_search_query();?> - <?php bloginfo('name')?>
+      <?php } elseif (is_tag() || is_category()) {?>
+        <?php single_term_title()?> - <?php bloginfo('name')?>
       <?php } else {?>
         <?php the_title() ?> - <?php bloginfo('name')?>
       <?php } ?>

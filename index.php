@@ -16,6 +16,19 @@
         </div>
       <?php } ?>
 
+      <!-- Category or Category Page -->
+      <?php if (is_category() || is_tag()) {?>
+        <div class = "row search-result">
+          <h1><?php if(is_tag()) echo "Tag : "; single_term_title()?></h1>
+          <p class = "category-description">
+            <?php
+              if (is_category()) echo category_description();
+              else if (is_tag()) echo tag_description();
+            ?>
+          </p>
+        </div>
+      <?php } ?>
+
       <!-- For Desktop and Tablet Site -->
       <div class = "row hide-on-med-and-down">
         <?php
