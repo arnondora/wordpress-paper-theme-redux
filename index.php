@@ -19,10 +19,10 @@
       <!-- For Desktop and Tablet Site -->
       <div class = "row hide-on-med-and-down">
         <?php
-          for($i=0; $i<=1; $i++)
+          $counter = 0;
+          if(have_posts())
           {
-            $counter = 0;
-            if(have_posts())
+            for($i=0; $i<=1; $i++)
             {
         ?>
                 <div class = "col s12 m12 l6">
@@ -77,9 +77,15 @@
                 </div>
           <?php
             }
-          }
-        ?>
-    </div>
+          } else {
+          ?>
+            <h1 class = "not-found-result">We can't found what you are looking for...</h1>
+            <h3 class = "not-found-result-subtext">Try other keyword or <a href = "<?php echo home_url('/')?>">Go Home?</a></h3>
+          <?php
+            }
+          ?>
+
+      </div>
 
     <!-- For Mobile Site -->
     <div class = "row hide-on-large-only">
@@ -136,8 +142,13 @@
                 ?>
                 </div>
           <?php
+            } else {
+          ?>
+            <h1 class = "not-found-result">We can't found what you are looking for...</h1>
+            <h3 class = "not-found-result-subtext">Try other keyword or <a href = "<?php echo home_url('/')?>">Go Home?</a></h3>
+          <?php
             }
-        ?>
+          ?>
     </div>
   </div>
 </main>

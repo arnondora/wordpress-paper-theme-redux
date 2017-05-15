@@ -8,3 +8,14 @@
 {
   color: $menubar-text-colour !important;
 }
+
+.not-found-result
+{
+  text-align: center;
+}
+
+.not-found-result-subtext
+{
+  @extend .not-found-result;
+  color: $menubar-text-colour !important;
+}
