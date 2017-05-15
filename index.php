@@ -9,6 +9,7 @@
         <?php get_search_form();?>
       </div>
 
+      <!-- Search Result -->
       <?php if (is_search()) {?>
         <div class = "row search-result">
           <p>Searched for : <?php echo get_search_query();?></p>
