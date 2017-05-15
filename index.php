@@ -6,14 +6,7 @@
 
       <!-- Search Box  -->
       <div class = "row">
-        <div class = "searchbox-outer">
-          <form method = "post">
-            <div class="input-field">
-              <i class = "fa fa-search search-font-color prefix" style = "margin-top:8px"></i>
-              <input type = "text" placeholder="Search something new!">
-            </div>
-          </form>
-        </div>
+        <?php get_search_form();?>
       </div>
 
       <!-- For Desktop and Tablet Site -->
