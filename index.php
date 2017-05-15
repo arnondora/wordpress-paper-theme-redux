@@ -9,6 +9,12 @@
         <?php get_search_form();?>
       </div>
 
+      <?php if (is_search()) {?>
+        <div class = "row search-result">
+          <p>Searched for : <?php echo get_search_query();?></p>
+        </div>
+      <?php } ?>
+
       <!-- For Desktop and Tablet Site -->
       <div class = "row hide-on-med-and-down">
         <?php
