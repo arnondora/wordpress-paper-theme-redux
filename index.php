@@ -19,10 +19,14 @@
       <!-- For Desktop and Tablet Site -->
       <div class = "row hide-on-med-and-down">
         <?php
+          //Prevent Repreated Post showing when Post Number is 1
+          if ($wp_the_query->post_count == 1) $limit = 0;
+          else $limit = 1;
+
           $counter = 0;
           if(have_posts())
           {
-            for($i=0; $i<=1; $i++)
+            for($i=0; $i<=$limit; $i++)
             {
         ?>
                 <div class = "col s12 m12 l6">
