@@ -23,6 +23,12 @@
   }
 }
 
+.content li
+{
+  color: $text-disabled-colour;
+  font-size: 18px;
+}
+
 iframe
 {
   display: block;
