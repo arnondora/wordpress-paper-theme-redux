@@ -27,6 +27,12 @@ function papertheme_enquque_assets()
 
 add_action( 'wp_enqueue_scripts', 'papertheme_enquque_assets' );
 
+// Filter For Controlling Excerpt Length
+function papertheme_excerpt_length( $length ) {
+    return 15;
+}
+add_filter( 'excerpt_length', 'papertheme_excerpt_length', 999 );
+
 // Filter For Page Pagination
 function papertheme_previous_post_pagination_filter() {
     return 'class="pull-right waves-effect waves-light btn post-pagination-btn"';
