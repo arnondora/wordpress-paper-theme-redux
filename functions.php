@@ -73,4 +73,12 @@ class papertheme_primary_menu_nav_walker extends Walker_Nav_Menu
             $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
             }
 }
+
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/ReduxFramework/ReduxCore/framework.php' );
+}
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/ReduxFramework/sample/sample-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/ReduxFramework/sample/sample-config.php' );
+}
+
 ?>
