@@ -30,6 +30,7 @@
     "gulp-clean-css": "^3.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",
+    "gulp-purifycss": "^0.2.0",
     "gulp-rev": "^7.1.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",

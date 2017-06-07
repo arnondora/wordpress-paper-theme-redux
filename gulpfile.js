@@ -4,6 +4,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
+var purify = require('gulp-purifycss');
 var gulpCopy = require('gulp-copy');
 
 
@@ -14,6 +15,7 @@ gulp.task('concatMain', function() {
   return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css','./node_modules/font-awesome/css/font-awesome.min.css', './src/scss/style.scss'])
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(purify(['./*.php']))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./dist/css"))
     .pipe(gulp.dest('./dist/css'));
