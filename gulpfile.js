@@ -8,11 +8,11 @@ var purify = require('gulp-purifycss');
 var gulpCopy = require('gulp-copy');
 
 
-gulp.task('default',['concatMain', 'concatJS', 'copyFont', 'copyAwesomeFont'], function() {
+gulp.task('default',['concatMain', 'concatJS', 'copyFont', 'copyAwesomeFont', 'copyAwesomeStyle'], function() {
 });
 
 gulp.task('concatMain', function() {
-  return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css','./node_modules/font-awesome/css/font-awesome.min.css', './src/scss/style.scss'])
+  return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css', './src/scss/style.scss'])
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(purify(['./*.php']))
@@ -39,7 +39,12 @@ gulp.task('copyAwesomeFont', function () {
   .pipe(gulp.dest('./dist/fonts'))
 });
 
+gulp.task('copyAwesomeStyle', function () {
+  return gulp.src(['./node_modules/font-awesome/css/font-awesome.min.css'])
+  .pipe(gulp.dest('./dist/css'))
+});
+
 gulp.task('watch', function(){
-  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS', 'copyFont','copyAwesomeFont']);
+  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS', 'copyFont','copyAwesomeFont', 'copyAwesomeStyle']);
   // Other watchers
 });
