@@ -24,7 +24,7 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">[A(;]</a>
-        <ul style = "margin-left:15px;" class="left">
+        <ul class="left">
           <li><a href="#" data-activates="slide-out" class="headernav-button-collapse">Menu</a></li>
         </ul>
       </div>
