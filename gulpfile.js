@@ -8,14 +8,16 @@ var purify = require('gulp-purifycss');
 var gulpCopy = require('gulp-copy');
 
 
-gulp.task('default',['concatMain', 'concatJS', 'copyFont', 'copyAwesomeFont', 'copyAwesomeStyle'], function() {
+gulp.task('default',['concatJS', 'concatMain', 'copyFont', 'copyAwesomeFont', 'copyAwesomeStyle'], function() {
 });
 
 gulp.task('concatMain', function() {
   return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css', './src/scss/style.scss'])
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(purify(['./*.php'],{whitelist : ['wp-caption-text','blockquote','iframe']}))
+    .pipe(purify(['./*.php','./dist/js/*.js'],{whitelist : [
+      'wp-caption-text','blockquote','iframe','active','ul:not(.browser-default)'
+    ]}))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./dist/css"))
     .pipe(gulp.dest('./dist/css'));
@@ -45,6 +47,6 @@ gulp.task('copyAwesomeStyle', function () {
 });
 
 gulp.task('watch', function(){
-  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS']);
+  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatJS', 'concatMain']);
   // Other watchers
 });
