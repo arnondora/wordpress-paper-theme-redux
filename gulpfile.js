@@ -45,6 +45,6 @@ gulp.task('copyAwesomeStyle', function () {
 });
 
 gulp.task('watch', function(){
-  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS', 'copyFont','copyAwesomeFont', 'copyAwesomeStyle']);
+  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatMain','concatJS']);
   // Other watchers
 });
