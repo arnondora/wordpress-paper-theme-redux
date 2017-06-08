@@ -16,7 +16,7 @@ gulp.task('concatMain', function() {
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
     .pipe(purify(['./*.php','./dist/js/*.js'],{whitelist : [
-      'wp-caption-text','blockquote','iframe','active','ul:not(.browser-default)'
+      'wp-caption-text','blockquote','iframe','active','ul:not(.browser-default)','html'
     ]}))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./dist/css"))
