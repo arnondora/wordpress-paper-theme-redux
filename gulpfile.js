@@ -15,7 +15,7 @@ gulp.task('concatMain', function() {
   return gulp.src(['./node_modules/materialize-css/dist/css/materialize.min.css', './src/scss/style.scss'])
     .pipe(concat('PaperTheme.css'))
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(purify(['./*.php']))
+    .pipe(purify(['./*.php'],{whitelist : ['wp-caption-text','blockquote','iframe']}))
     .pipe(cleanCSS())
     .pipe(sourcemaps.write("./dist/css"))
     .pipe(gulp.dest('./dist/css'));
