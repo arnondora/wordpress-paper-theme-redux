@@ -29,14 +29,6 @@ function papertheme_enquque_assets()
 
 add_action( 'wp_enqueue_scripts', 'papertheme_enquque_assets' );
 
-// Filter For Add Async to script tag
-function papertheme_script_async_tag_add($tag){
-
-# Add async to all remaining scripts
-return str_replace( ' src', ' async="async" src', $tag );
-}
-add_filter( 'script_loader_tag', 'papertheme_script_async_tag_add', 10 );
-
 // Filter For Controlling Excerpt Length
 function papertheme_excerpt_length( $length ) {
     return 15;
