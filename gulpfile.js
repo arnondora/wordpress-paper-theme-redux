@@ -6,9 +6,10 @@ var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var purify = require('gulp-purifycss');
 var gulpCopy = require('gulp-copy');
+var gulpServiceWorker = require('gulp-serviceworker');
 
 
-gulp.task('default',['concatJS', 'concatMain', 'copyFont', 'copyAwesomeFont', 'copyAwesomeStyle'], function() {
+gulp.task('default',['concatJS', 'concatMain', 'copyFont', 'copyAwesomeFont', 'copyAwesomeStyle', 'generate-service-worker'], function() {
 });
 
 gulp.task('concatMain', function() {
@@ -46,7 +47,14 @@ gulp.task('copyAwesomeStyle', function () {
   .pipe(gulp.dest('./dist/css'))
 });
 
+gulp.task('generate-service-worker', function() {
+  return gulp.src(['dist/*'])
+  .pipe(gulpServiceWorker({
+    rootDir: 'dist/',
+  }));
+});
+
 gulp.task('watch', function(){
-  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatJS', 'concatMain']);
+  gulp.watch(['./src/scss/*.scss', './src/js/*.js'], ['concatJS', 'concatMain', 'generate-service-worker']);
   // Other watchers
 });

@@ -33,6 +33,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-rev": "^7.1.2",
     "gulp-sass": "^3.1.0",
+    "gulp-serviceworker": "0.0.3",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "uglify": "^0.1.5"
