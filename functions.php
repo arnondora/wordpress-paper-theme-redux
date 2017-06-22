@@ -46,6 +46,12 @@ function papertheme_script_async_tag_add($tag){
 }
 add_filter( 'script_loader_tag', 'papertheme_script_async_tag_add', 10 );
 
+// Filter For Add Aysnc to style tag
+function papertheme_style_async_tag_add ($tag){
+  return str_replace('href=', 'async=async href=', $tag);
+}
+add_filter( 'style_loader_tag', 'papertheme_style_async_tag_add', 10);
+
 // Filter For Controlling Excerpt Length
 function papertheme_excerpt_length( $length ) {
     return 15;
