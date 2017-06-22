@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#0f94f6">
     <link rel="manifest" href="<?php echo get_template_directory_uri() . '/manifest.json' ?>">
 
     <!-- AMP Style  -->
