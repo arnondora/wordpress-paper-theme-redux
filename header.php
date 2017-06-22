@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp>
+<html amp lang="th">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
