@@ -6,7 +6,7 @@
   <!-- Post Thumbnail  -->
   <?php the_post(); if (has_post_thumbnail()) { ?>
     <div class="single-container-img">
-      <img class = "responsive-img" src = "<?php the_post_thumbnail_url()?>">
+      <img class = "responsive-img" alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>">
     </div>
   <?php } ?>
 
