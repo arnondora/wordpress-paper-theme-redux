@@ -9,10 +9,22 @@
   background-color: $primary-colour;
 }
 
+.social-btn-share:hover
+{
+  @extend .social-btn-main-font;
+  background-color: darken($primary-colour, $social-btn-hover-darken);
+}
+
 .social-btn-facebook
 {
   @extend .social-btn-main-font;
   background-color: $facebook-colour;
+}
+
+.social-btn-facebook:hover
+{
+  @extend .social-btn-main-font;
+  background-color: darken($facebook-colour,$social-btn-hover-darken);
 }
 
 .social-btn-twitter
@@ -21,8 +33,20 @@
   background-color: $twitter-colour;
 }
 
+.social-btn-twitter:hover
+{
+  @extend .social-btn-main-font;
+  background-color: darken($twitter-colour,$social-btn-hover-darken);
+}
+
 .social-btn-google-plus
 {
   @extend .social-btn-main-font;
   background-color: $google-plus-colour;
+}
+
+.social-btn-google-plus:hover
+{
+  @extend .social-btn-main-font;
+  background-color: darken($google-plus-colour, $social-btn-hover-darken);
 }
