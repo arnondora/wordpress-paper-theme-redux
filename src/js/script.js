@@ -1,7 +1,11 @@
 WebFont.load({
     google: {
-      families: ['Open Sans']
-    }
+      families: ['Open Sans:300,500,700']
+    },
+    custom: {
+    families: ['fontawesome'],
+    urls: ['/wp-content/themes/PaperTheme3/dist/css/font-awesome.min.css']
+  }
   });
 
 // Register Service Worker
