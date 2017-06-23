@@ -48,7 +48,7 @@ gulp.task('copyAwesomeStyle', function () {
 });
 
 gulp.task('generate-service-worker', function() {
-  return gulp.src(['dist/*'])
+  return gulp.src(['dist/*','https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'])
   .pipe(gulpServiceWorker({
     rootDir: 'dist/',
   }));
