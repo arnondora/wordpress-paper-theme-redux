@@ -1,6 +1,6 @@
 WebFont.load({
     google: {
-      families: ['Open Sans', 'Kanit']
+      families: ['Open Sans']
     }
   });
 
