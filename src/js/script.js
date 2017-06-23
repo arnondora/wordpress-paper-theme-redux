@@ -1,6 +1,6 @@
 WebFont.load({
     google: {
-      families: ['Open Sans:300,500,700']
+      families: ['Open Sans:400,700']
     },
     custom: {
     families: ['fontawesome'],
