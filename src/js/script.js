@@ -1,3 +1,9 @@
+WebFont.load({
+    google: {
+      families: ['Open Sans', 'Kanit']
+    }
+  });
+
 // Register Service Worker
 // Please Ensure the path of the service worker script below
 if ('serviceWorker' in navigator) {
