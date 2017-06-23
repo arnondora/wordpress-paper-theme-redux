@@ -55,16 +55,16 @@
                     <div class = "card index-card-margin-<?php if($i == 0) echo 'left'; else echo 'right';?>">
                       <?php if (has_post_thumbnail()) { ?>
                         <div class = "card-image">
-                          <a href = "<?php the_permalink(); ?>"><img src = "<?php the_post_thumbnail_url() ?>" alt = "<?php the_title()?>"></a>
+                          <a rel="noopener"  href = "<?php the_permalink(); ?>"><img src = "<?php the_post_thumbnail_url() ?>" alt = "<?php the_title()?>"></a>
                           <!-- Sharing Button -->
                           <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a class="btn-floating btn-large social-btn-share">
+                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
                                 <i class="fa fa-share-alt"></i>
                               </a>
                               <ul>
-                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
                               </ul>
                           </div>
                         </div>
@@ -74,17 +74,17 @@
                         <?php if (has_post_thumbnail() == false) {?>
                           <!-- Sharing Button -->
                           <div style = "position: relative; margin-top:10px;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a class="btn-floating btn-large social-btn-share">
+                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
                                 <i class="fa fa-share-alt"></i>
                               </a>
                               <ul>
-                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
                               </ul>
                           </div>
                         <?php } ?>
-                        <h1><a class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <h1><a rel="noopener"  class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
                         <p><?php the_excerpt();?></p>
                       </div>
                     </div>
@@ -98,7 +98,7 @@
           } else {
           ?>
             <h1 class = "not-found-result">We can't found what you are looking for...</h1>
-            <h3 class = "not-found-result-subtext">Try other keyword or <a href = "<?php echo home_url('/')?>">Go Home?</a></h3>
+            <h3 class = "not-found-result-subtext">Try other keyword or <a rel="noopener"  href = "<?php echo home_url('/')?>">Go Home?</a></h3>
           <?php
             }
           ?>
@@ -121,16 +121,16 @@
                     <div class = "card">
                       <?php if (has_post_thumbnail()) { ?>
                         <div class = "card-image">
-                          <a href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url() ?>"></a>
+                          <a rel="noopener"  href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url() ?>"></a>
                           <!-- Sharing Button -->
                           <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a class="btn-floating btn-large social-btn-share">
+                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
                                 <i class="fa fa-share-alt"></i>
                               </a>
                               <ul>
-                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
                               </ul>
                           </div>
                         </div>
@@ -140,17 +140,17 @@
                         <?php if (has_post_thumbnail() == false) {?>
                           <!-- Sharing Button -->
                           <div style = "position: relative; margin-top:10px;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a class="btn-floating btn-large social-btn-share">
+                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
                                 <i class="fa fa-share-alt"></i>
                               </a>
                               <ul>
-                                <li><a href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
                               </ul>
                           </div>
                         <?php } ?>
-                        <h1><a class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <h1><a rel="noopener"  class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
                         <p><?php the_excerpt();?></p>
                       </div>
                     </div>
@@ -163,7 +163,7 @@
             } else {
           ?>
             <h1 class = "not-found-result">We can't found what you are looking for...</h1>
-            <h3 class = "not-found-result-subtext">Try other keyword or <a href = "<?php echo home_url('/')?>">Go Home?</a></h3>
+            <h3 class = "not-found-result-subtext">Try other keyword or <a rel="noopener"  href = "<?php echo home_url('/')?>">Go Home?</a></h3>
           <?php
             }
           ?>

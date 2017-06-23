@@ -23,7 +23,7 @@
         <div class = "content">
           <h1>Error 404</h1>
           <h2>Not Found what you are looking for...</h2>
-          <a href = "<?php echo home_url('/')?>">Go to home ?</a>
+          <a rel="noopener"  href = "<?php echo home_url('/')?>">Go to home ?</a>
         </div>
       </div>
     </main>
