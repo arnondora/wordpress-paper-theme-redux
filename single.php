@@ -19,7 +19,6 @@
     <div class = "row content">
       <?php the_content();?>
       <?php wp_link_pages(); ?>
-      <hr>
       <div class = "tags">
         <ul>
           <li class = "chip chip-category"><?php the_category('</li><li class = "chip chip-category">');?></li>
