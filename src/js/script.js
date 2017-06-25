@@ -5,7 +5,8 @@ WebFont.load({
     custom: {
     families: ['fontawesome'],
     urls: ['/wp-content/themes/PaperTheme3/dist/css/font-awesome.min.css']
-  }
+  },
+  timeout: 5000 //Set Timeout for 5 second
   });
 
 // Register Service Worker
