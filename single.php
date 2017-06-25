@@ -18,6 +18,7 @@
 
     <div class = "row content">
       <?php the_content();?>
+      <?php wp_link_pages(); ?>
       <hr>
       <div class = "tags">
         <ul>
