@@ -55,7 +55,7 @@
                     <div class = "card index-card-margin-<?php if($i == 0) echo 'left'; else echo 'right';?>">
                       <?php if (has_post_thumbnail()) { ?>
                         <div class = "card-image">
-                          <a rel="noopener"  href = "<?php the_permalink(); ?>"><img src = "<?php the_post_thumbnail_url() ?>" alt = "<?php the_title()?>"></a>
+                          <a rel="noopener"  href = "<?php the_permalink(); ?>"><img src = "<?php the_post_thumbnail_url() ?>" class = "postThumbnailImage" alt = "<?php the_title()?>"></a>
                           <!-- Sharing Button -->
                           <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
                               <a rel="noopener"  class="btn-floating btn-large social-btn-share">
@@ -121,7 +121,7 @@
                     <div class = "card">
                       <?php if (has_post_thumbnail()) { ?>
                         <div class = "card-image">
-                          <a rel="noopener"  href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url() ?>"></a>
+                          <a rel="noopener"  href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="postThumbnailImage"></a>
                           <!-- Sharing Button -->
                           <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
                               <a rel="noopener"  class="btn-floating btn-large social-btn-share">

@@ -22,3 +22,20 @@
   @extend .index-card-margin-bottom;
   margin-left: 25px;
 }
+
+.card-image
+{
+  overflow: hidden;
+}
+
+.postThumbnailImage
+{
+  transition: all .2s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.postThumbnailImage:hover
+{
+  transform: scale(1.1);
+}
