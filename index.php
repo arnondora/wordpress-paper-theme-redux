@@ -51,7 +51,7 @@
                     $counter++;
                     if ($counter%2 == $i) continue;
                 ?>
-                  <div class = "row">
+                  <div class = "row index">
                     <div class = "card index-card-margin-<?php if($i == 0) echo 'left'; else echo 'right';?>">
                       <?php if (has_post_thumbnail()) { ?>
                         <div class = "card-image">
