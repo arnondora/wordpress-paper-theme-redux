@@ -75,6 +75,10 @@
   {
     color: white;
   }
+
+  &:hover {
+    background-color: darken($primary-colour, $chip-hover-darken);
+  }
 }
 
 .chip-category
@@ -85,5 +89,9 @@
   a
   {
     color: $text-heading-colour;
+  }
+
+  &:hover {
+    background-color: darken($home-background-colour, $chip-hover-darken);
   }
 }
