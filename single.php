@@ -27,6 +27,36 @@
       </div>
     </div>
 
+    <?php
+      $related_post_args = array(
+        'post_type' => 'post',
+        'cat' =>  wp_get_post_categories( get_the_ID() ),
+        'posts_per_page' => 3,
+	      'post__not_in'   => array( get_the_ID() ), // Exclude current post
+	      'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
+      );
+
+      $relatedPost = new WP_Query( $related_post_args );
+
+      if ($relatedPost->have_posts()) :
+    ?>
+    <div class = "row content more-post">
+      <h2>More post from us !</h2>
+      <hr>
+      <div class = "article-set">
+        <?php while( $relatedPost->have_posts() ): $relatedPost->the_post(); ?>
+          <div class = "col s4">
+            <a href = "<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+            <?php if (has_post_thumbnail()): ?>
+              <a href = "<?php the_permalink();?>"><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="postThumbnailImage"></a>
+            <?php endif;?>
+          </div>
+        <?php endwhile; ?>
+      </div>
+    </div>
+
+  <?php endif; ?>
+
     <?php if (comments_open()) comments_template();?>
   </div>
 

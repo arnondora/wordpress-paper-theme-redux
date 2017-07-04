@@ -105,3 +105,14 @@
     background-color: darken($home-background-colour, $chip-hover-darken);
   }
 }
+
+// More Post
+.more-post
+{
+  margin-top:0px;
+}
+
+.more-post > .article-set
+{
+  margin-top:16px;
+}
