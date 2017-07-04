@@ -66,8 +66,18 @@
 }
 
 // Tags
+.customchip
+{
+  display: inline-block;
+  font-weight: 500;
+  padding: 5px 12px 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 .chip-tag
 {
+  @extend .customchip;
   @extend .link-no-decorate;
   background-color: $primary-colour;
 
@@ -83,6 +93,7 @@
 
 .chip-category
 {
+  @extend .customchip;
   @extend .link-no-decorate;
   background-color: $home-background-colour;
 
