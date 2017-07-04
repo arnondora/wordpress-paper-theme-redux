@@ -4,6 +4,11 @@ input:not([type]):focus:not([readonly]), input[type=date]:focus:not([readonly]),
   box-shadow: 0 1px 0 0 $primary-colour;
 }
 
+.comment-area
+{
+  padding-top: 20px;  
+}
+
 .comment-meta
 {
   padding-left: 0px;
