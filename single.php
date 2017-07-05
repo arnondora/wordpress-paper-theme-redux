@@ -66,9 +66,9 @@
         <i class="fa fa-share-alt"></i>
       </a>
       <ul>
-        <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-        <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-        <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Facebook" href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Twitter" href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Google+" href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
       </ul>
   </div>
 
