@@ -28,7 +28,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.2.0",
+    "gulp-clean-css": "^3.5.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",
     "gulp-purifycss": "^0.2.0",
@@ -36,12 +36,12 @@
     "gulp-sass": "^3.1.0",
     "gulp-serviceworker": "0.0.3",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^2.1.2",
+    "gulp-uglify": "^3.0.0",
     "uglify": "^0.1.5"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
-    "materialize-css": "^0.98.2"
+    "materialize-css": "^0.99.0"
   }
 }
