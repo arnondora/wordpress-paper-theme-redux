@@ -45,7 +45,7 @@
       <hr>
       <div class = "article-set">
         <?php while( $relatedPost->have_posts() ): $relatedPost->the_post(); ?>
-          <div class = "col s4">
+          <div class = "col m4 s12">
             <a href = "<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
             <?php if (has_post_thumbnail()): ?>
               <a href = "<?php the_permalink();?>"><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="postThumbnailImage"></a>
