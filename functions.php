@@ -34,46 +34,10 @@ add_action( 'wp_enqueue_scripts', 'papertheme_enquque_assets' );
 // Filter For Add Async to script tag
 function papertheme_script_async_tag_add($tag){
 
-  # Do not add async to these scripts
-  $scripts_to_exclude = array();
-
-  foreach($scripts_to_exclude as $exclude_script){
-  	if(true == strpos($tag, $exclude_script ) )
-  	return $tag;
-  }
-
-  # Add async to all remaining scripts
-  return str_replace( ' src', ' async="async" src', $tag );
-
+# Add async to all remaining scripts
+return str_replace( ' src', ' async="async" src', $tag );
 }
 add_filter( 'script_loader_tag', 'papertheme_script_async_tag_add', 10 );
-
-// Filter For Add Aysnc to style tag
-function papertheme_style_async_tag_add ($tag){
-  return str_replace('href=', 'async=async href=', $tag);
-}
-add_filter( 'style_loader_tag', 'papertheme_style_async_tag_add', 10);
-
-// Filter For Changing the page title
-function papertheme_page_title( $title, $sep ) {
-    global $paged, $page;
-
-    if ( is_feed() )
-        return $title;
-
-    // Add the site name.
-    $title .= get_bloginfo( 'name' );
-
-    $site_description = get_bloginfo( 'description', 'display' );
-    if ( $site_description && ( is_home() || is_front_page() ) )
-        $title = "$title $sep $site_description";
-
-    if ( $paged >= 2 || $page >= 2 )
-        $title = "$title $sep " . sprintf( __( 'Page %s', 'papertheme' ), max( $paged, $page ) );
-
-    return $title;
-}
-add_filter( 'wp_title', 'papertheme_page_title', 10, 2 );
 
 // Filter For Controlling Excerpt Length
 function papertheme_excerpt_length( $length ) {
