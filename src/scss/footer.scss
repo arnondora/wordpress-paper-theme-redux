@@ -41,3 +41,13 @@ main
       margin-bottom: 0px !important;
     }
 }
+
+.footer-contact-list
+{
+  color: white !important;
+}
+
+.footer-contact-list:hover
+{
+  color: lighten($primary-colour, $contact-btn-hover-lighter) !important;
+}
