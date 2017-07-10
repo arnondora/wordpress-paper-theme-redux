@@ -6,19 +6,40 @@
   width: 94%;
 }
 
-.index-card-margin-bottom
+.content-container
 {
-  margin-bottom: 35px;
+  column-count: 2;
+  column-gap: 1em;
+  column-break-inside: avoid;
+
+  @media (max-width: 900px)
+  {
+    column-count: 1;
+  }
 }
 
-.index-card-margin-left
+.content-item
 {
-  @extend .index-card-margin-bottom;
-  margin-right: 25px;
+  display: inline-block;
+  margin:  0.25rem;
+  padding:  1rem;
+  width:  100%;
 }
 
-.index-card-margin-right
+.content-item > .card > .card-image
 {
-  @extend .index-card-margin-bottom;
-  margin-left: 25px;
+  overflow: hidden;
+  margin-bottom: -60px;
+}
+
+.postThumbnailImage
+{
+  transition: all .2s ease-in-out;
+  width:100%;
+  height:100%;
+}
+
+.postThumbnailImage:hover
+{
+  transform: scale(1.1);
 }

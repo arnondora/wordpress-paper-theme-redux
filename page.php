@@ -6,7 +6,7 @@
   <!-- Page Thumbnail (if any) -->
   <?php the_post(); if (has_post_thumbnail()) { ?>
     <div class="parallax-container">
-      <div id = "page-parallax" class="page-parallax"><img src="<?php the_post_thumbnail_url()?>"></div>
+      <div id = "page-parallax" class="page-parallax"><img alt = "<?php the_title()?>" src="<?php the_post_thumbnail_url()?>"></div>
     </div>
   <?php } ?>
 

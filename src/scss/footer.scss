@@ -19,13 +19,24 @@ main
 
 .footer-contact-list
 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   margin-bottom: 0px !important;
 }
 
-.footer-contact-list > li
+.footer-contact-list > div:first-child
+{
+  margin-left: 0;
+  flex: 0;
+}
+
+.footer-contact-list > div
 {
   margin-left: 20px;
-  display: inline-block;
+  flex: 0;
 }
 
 .footer-contact-list > li:first
@@ -40,4 +51,14 @@ main
       margin-top: 0px !important;
       margin-bottom: 0px !important;
     }
+}
+
+.footer-contact-list
+{
+  color: white !important;
+}
+
+.footer-contact-list:hover
+{
+  color: lighten($primary-colour, $contact-btn-hover-lighter) !important;
 }

@@ -61,13 +61,22 @@
 // Single Page Tag Area
 .single-container > .content > .tags
 {
-  margin-top:20px;
   margin-bottom: 25px;
 }
 
 // Tags
+.customchip
+{
+  display: inline-block;
+  font-weight: 500;
+  padding: 5px 12px 5px 12px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 .chip-tag
 {
+  @extend .customchip;
   @extend .link-no-decorate;
   background-color: $primary-colour;
 
@@ -75,10 +84,15 @@
   {
     color: white;
   }
+
+  &:hover {
+    background-color: darken($primary-colour, $chip-hover-darken);
+  }
 }
 
 .chip-category
 {
+  @extend .customchip;
   @extend .link-no-decorate;
   background-color: $home-background-colour;
 
@@ -86,4 +100,19 @@
   {
     color: $text-heading-colour;
   }
+
+  &:hover {
+    background-color: darken($home-background-colour, $chip-hover-darken);
+  }
+}
+
+// More Post
+.more-post
+{
+  margin-top:0px;
+}
+
+.more-post > .article-set
+{
+  margin-top:16px;
 }

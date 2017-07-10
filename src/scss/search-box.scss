@@ -27,7 +27,13 @@
   box-shadow: 0 1px 0 0 $home-background-colour;
 }
 
-.searchbox-outer .input-field .prefix.active
+.searchbox-outer .input-field .active
+{
+  color: $text-disabled-colour;
+}
+
+.searchbox-outer .input-field input
 {
      color: $text-heading-colour;
+     border-bottom: none;
 }

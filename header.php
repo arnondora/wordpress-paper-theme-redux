@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html amp>
+<html amp <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#0f94f6">
+    <link rel="manifest" href="<?php echo get_template_directory_uri() . '/manifest.json' ?>">
 
     <!-- AMP Style  -->
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-    <title>
-      <?php if(is_home()) {?>
-        <?php bloginfo('name')?> - <?php bloginfo('description')?>
-      <?php } elseif (is_search()) {?>
-        Search Result for <?php echo get_search_query();?> - <?php bloginfo('name')?>
-      <?php } elseif (is_tag() || is_category()) {?>
-        <?php single_term_title()?> - <?php bloginfo('name')?>
-      <?php } else {?>
-        <?php the_title() ?> - <?php bloginfo('name')?>
-      <?php } ?>
-    </title>
     <?php wp_head() ?>
   </head>
   <body>
@@ -25,7 +16,7 @@
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo center">[A(;]</a>
         <ul class="left">
-          <li><a href="#" data-activates="slide-out" class="headernav-button-collapse">Menu</a></li>
+          <li><a href="#" data-activates="slide-out" class="headernav-button-collapse hide-on-large-only">Menu</a></li>
         </ul>
       </div>
     </nav>
