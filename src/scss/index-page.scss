@@ -6,24 +6,27 @@
   width: 94%;
 }
 
-.index-card-margin-bottom
+.content-container
 {
-  margin-bottom: 35px;
+  column-count: 2;
+  column-gap: 1em;
+  column-break-inside: avoid;
+
+  @media (max-width: 900px)
+  {
+    column-count: 1;
+  }
 }
 
-.index-card-margin-left
+.content-item
 {
-  @extend .index-card-margin-bottom;
-  margin-right: 25px;
+  display: inline-block;
+  margin:  0.25rem;
+  padding:  1rem;
+  width:  100%;
 }
 
-.index-card-margin-right
-{
-  @extend .index-card-margin-bottom;
-  margin-left: 25px;
-}
-
-.index .card-image
+.content-item > .card > .card-image
 {
   overflow: hidden;
   margin-bottom: -60px;
