@@ -27,6 +27,18 @@
       </div>
     </div>
 
+    <!-- Sharing Button -->
+    <div class="fixed-action-btn vertical click-to-toggle pull-right">
+        <a rel="noopener"  class="btn-floating btn-large social-btn-share">
+          <i class="fa fa-share-alt"></i>
+        </a>
+        <ul>
+          <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Facebook" href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+          <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Twitter" href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Google+" href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+    </div>
+
     <?php
       $related_post_args = array(
         'post_type' => 'post',
@@ -58,18 +70,6 @@
   <?php endif; ?>
 
     <?php if (comments_open()) comments_template();?>
-  </div>
-
-  <!-- Sharing Button -->
-  <div class="fixed-action-btn vertical click-to-toggle pull-right">
-      <a rel="noopener"  class="btn-floating btn-large social-btn-share">
-        <i class="fa fa-share-alt"></i>
-      </a>
-      <ul>
-        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Facebook" href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Twitter" href = "https://twitter.com/home?status=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-        <li><a rel="noopener" data-position="left" data-delay="50" data-tooltip="Google+" href = "https://plus.google.com/share?url=<?php the_permalink();?>" target="_blank" class="btn-floating social-tooltipped social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
-      </ul>
   </div>
 
 </main>
