@@ -38,7 +38,7 @@ gulp.task('concatMain', function() {
 });
 
 gulp.task('concatJS', function() {
-  return gulp.src(['./node_modules/jquery/dist/jquery.js','./node_modules/materialize-css/dist/js/materialize.min.js', './src/js/*.js'])
+  return gulp.src(['./node_modules/webfontloader/webfontloader.js', './node_modules/jquery/dist/jquery.js','./node_modules/materialize-css/dist/js/materialize.min.js', './src/js/*.js'])
     .pipe(concat('PaperTheme.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write("./dist/js"))
