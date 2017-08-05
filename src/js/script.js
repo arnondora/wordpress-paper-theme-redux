@@ -20,3 +20,15 @@ $(document).ready(function(){
   $('#page-parallax').parallax();
   $('.social-tooltipped').tooltip({delay: 50});
 });
+
+// Top Search Bar Functions
+function openTopSearchBar (x)
+{
+  document.getElementById("top-search-input").style.display = "inline";
+  document.getElementById("top-search-input").focus();
+}
+
+function closeTopSearchBar (x)
+{
+  document.getElementById("top-search-input").style.display = "none";
+}

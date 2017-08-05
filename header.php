@@ -18,6 +18,15 @@
         <ul class="left">
           <li><a href="#" data-activates="slide-out" class="headernav-button-collapse hide-on-large-only">Menu</a></li>
         </ul>
+
+        <ul class="topbar-right">
+          <li class = "search-box-wrapper" onmouseover="openTopSearchBar(this)" onmouseout="closeTopSearchBar(this)">
+            <i class="fa fa-search top-search-icon" aria-hidden="true"></i>
+            <form method="get" action =  "<?php echo home_url('/')?>">
+              <input type="text" id = "top-search-input" class = "top-search-input" name="s" placeholder="Search something new!">
+            </form>
+          </li>
+        </ul>
       </div>
     </nav>
 
