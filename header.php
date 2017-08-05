@@ -15,7 +15,7 @@
     <nav>
       <div class="nav-wrapper">
         <a href="<?php echo home_url('/')?>" class="brand-logo center">[A(;]</a>
-        <ul class="left">
+        <ul class="topbar-left">
           <li><a href="#" data-activates="slide-out" class="headernav-button-collapse">Menu</a></li>
         </ul>
 
