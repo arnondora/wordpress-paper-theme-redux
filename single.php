@@ -21,7 +21,6 @@
       <?php wp_link_pages(); ?>
       <div class = "tags">
         <ul>
-          <li class = "chip-category"><?php the_category('</li><li class = "chip-category">');?></li>
           <?php the_tags( '<li class = "chip-tag">', '</li><li class = "chip-tag">', '</li>' ); ?>
         </ul>
       </div>
