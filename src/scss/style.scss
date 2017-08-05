@@ -30,3 +30,9 @@ nav
 {
   background-color: $primary-colour !important;
 }
+
+// Override Materialize
+.fixed-action-btn
+{
+  z-index: 1;
+}
