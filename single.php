@@ -13,7 +13,7 @@
   <div id = "post-<?php the_ID(); ?>" <?php post_class('single-container'); ?>>
     <div class = "row title">
       <h1><?php the_title();?></h1>
-      <p>Posted by <?php the_author();?> on <?php the_date('F jS, Y');?></p>
+      <p><?php the_category(' ')?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
     </div>
 
     <div class = "row content">
