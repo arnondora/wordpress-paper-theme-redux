@@ -42,7 +42,7 @@
       $related_post_args = array(
         'post_type' => 'post',
         'cat' =>  wp_get_post_categories( get_the_ID() ),
-        'posts_per_page' => 3,
+        'posts_per_page' => 2,
 	      'post__not_in'   => array( get_the_ID() ), // Exclude current post
 	      'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
       );
@@ -52,18 +52,24 @@
       if ($relatedPost->have_posts()) :
     ?>
     <div class = "row content more-post">
-      <h2>More post from us !</h2>
-      <hr>
-      <div class = "article-set">
+      <h2>You might also like...</h2>
+
+      <div class = "article-group">
         <?php while( $relatedPost->have_posts() ): $relatedPost->the_post(); ?>
-          <div class = "col m4 s12">
-            <a href = "<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+          <div class = "article-set">
             <?php if (has_post_thumbnail()): ?>
               <a href = "<?php the_permalink();?>"><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="postThumbnailImage"></a>
             <?php endif;?>
+
+            <span class = "category"><?php the_category(' ')?></span>
+
+            <a class = "title" href = "<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+
+            <span class = "excerpt"><?php the_excerpt() ?></span>
           </div>
         <?php endwhile; ?>
-      </div>
+    </div>
+
     </div>
 
   <?php endif; ?>
