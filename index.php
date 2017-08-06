@@ -5,9 +5,11 @@
   <div class = "home-container">
 
       <!-- Search Box  -->
+      <?php if (!is_category() && !is_tag()) { ?>
       <div class = "row">
         <?php get_search_form();?>
       </div>
+      <?php } ?>
 
       <!-- Search Result -->
       <?php if (is_search()) {?>
@@ -19,7 +21,7 @@
       <!-- Category or Category Page -->
       <?php if (is_category() || is_tag()) {?>
         <div class = "row search-result">
-          <h1><?php if(is_tag()) echo "Tag : "; single_term_title()?></h1>
+          <h1 class = "tax-header"><?php if(is_tag()) echo "Tag : "; single_term_title()?></h1>
           <p class = "category-description">
             <?php
               if (is_category()) echo category_description();
