@@ -8,6 +8,11 @@ nav
   display: flex;
   flex-direction: row;
   animation: fadein 0.2s;
+
+  @media (max-width: 992px)
+  {
+    padding-right: 0px;
+  }
 }
 
 main
@@ -18,25 +23,33 @@ main
 nav > .left
 {
   flex: 1 0 0;
-  max-width: 50%;
   float: left;
+
+  @media (max-width: 992px)
+  {
+    flex: 0;
+  }
 }
 
 nav > .centre
 {
   display: flex;
   flex: 1 0 0;
-  max-width: 50%;
   justify-content: center;
+
+  @media (max-width: 992px)
+  {
+    margin-right: 50px;
+  }
 }
 
 nav > .right
 {
   flex: 1 0 0;
-  max-width: 50%;
   display: flex;
   justify-content: flex-end;
-  @media only screen and (max-width : 992px) {
+  @media (max-width : 992px)
+  {
     display:none;
   }
 }
