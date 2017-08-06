@@ -13,22 +13,21 @@
   </head>
   <body>
     <nav>
-      <div class="nav-wrapper">
-        <a href="<?php echo home_url('/')?>" class="brand-logo center">[A(;]</a>
-        <ul class="topbar-left">
-          <li><a href="#" data-activates="slide-out" class="headernav-button-collapse">Menu</a></li>
-        </ul>
+      <ul class="left">
+        <li><a href="#" data-activates="slide-out" class="headernav-button-collapse">Menu</a></li>
+      </ul>
 
-        <ul class="topbar-right">
-          <li class = "search-box-wrapper" onmouseover="openTopSearchBar(this)" onmouseout="closeTopSearchBar(this)">
-            <i class="fa fa-search top-search-icon" aria-hidden="true"></i>
-            <form method="get" action =  "<?php echo home_url('/')?>">
-              <input type="text" id = "top-search-input" class = "top-search-input" name="s" placeholder="Search something new!">
-            </form>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <div class = "centre"><a href="<?php echo home_url('/')?>" class="site-logo">[A(;]</a></div>
+
+      <ul class="right">
+        <li class = "search-box-wrapper" onmouseover="openTopSearchBar(this)" onmouseout="closeTopSearchBar(this)">
+          <i class="fa fa-search top-search-icon" aria-hidden="true"></i>
+          <form method="get" action =  "<?php echo home_url('/')?>">
+            <input type="text" id = "top-search-input" class = "top-search-input" name="s" placeholder="Search something new!">
+          </form>
+        </li>
+      </ul>
+  </nav>
 
     <section>
       <div id="slide-out" class="side-nav left-aligned">

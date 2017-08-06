@@ -3,6 +3,7 @@
 */
 
 @import "variables";
+@import "animation";
 @import "font";
 @import "topbar";
 @import "side-nav";
@@ -23,12 +24,6 @@ html
 {
   background-color: white;
   font-family: $font-family-stack;
-}
-
-// Head Nav
-nav
-{
-  background-color: $primary-colour !important;
 }
 
 // Override Materialize
