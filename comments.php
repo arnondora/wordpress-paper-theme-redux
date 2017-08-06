@@ -3,7 +3,6 @@
 ?>
 
 <div class = "row comment-area">
-  <hr>
   <?php
     $comment_form_args = array(
       'title_reply'     => 'Leave a comment?',
