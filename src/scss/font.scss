@@ -29,6 +29,12 @@ blockquote > p
   color: $text-secondary-colour;
 }
 
+blockquote > p > strong
+{
+  font-family: $font-family-stack;
+  font-weight: 400;
+}
+
 strong
 {
   font-weight: 700;
