@@ -93,6 +93,11 @@ iframe
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
+
+  @media (max-width: 992px)
+  {
+    width: 100%;
+  }
 }
 
 pre
