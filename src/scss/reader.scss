@@ -8,6 +8,11 @@
   }
 }
 
+.single-parallax-container > .parallax > img
+{
+  animation: fadein 1s;
+}
+
 .single-parallax-container > .parallax > .overlay
 {
   position:absolute;
