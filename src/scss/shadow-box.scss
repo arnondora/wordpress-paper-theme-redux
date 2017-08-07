@@ -1,0 +1,81 @@
+.shadow-box
+{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+  padding: 0;
+  overflow: hidden;
+}
+
+.shadow-box > a > .thumbnail
+{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  flex: 0;
+  transition: all .2s ease-in-out;
+}
+
+.shadow-box > .share-btn
+{
+  position: relative;
+  margin-top: -10px;
+  margin-right: 25px;
+  padding: 0;
+}
+
+.share-btn > a
+{
+  float :right;
+}
+
+.shadow-box > .share-no-thumbnail
+{
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
+.shadow-box > a > .thumbnail:hover
+{
+  transform: scale(1.1);
+}
+
+.shadow-box > .content-wrapper
+{
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 30px 30px;
+  flex: 0;
+}
+
+.shadow-box > .content-wrapper-no-thumbnail
+{
+  margin-top: -60px;
+}
+
+.content-wrapper > .title
+{
+  flex: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper > .subtitle
+{
+  margin-top: 5px;
+}
+
+.content-wrapper > .excerpt
+{
+  flex: 0;
+  margin-top: 15px;
+}
+
+.content-wrapper > .excerpt > p
+{
+  margin: 0;
+  padding: 0;
+}

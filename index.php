@@ -43,42 +43,30 @@
                     the_post();
                 ?>
                   <div class = "content-item">
-                    <div class = "card">
-                      <?php if (has_post_thumbnail()) { ?>
-                        <div class = "card-image">
-                          <a rel="noopener"  href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="postThumbnailImage"></a>
-                          <!-- Sharing Button -->
-                          <div style = "position: relative;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
-                                <i class="fa fa-share-alt"></i>
-                              </a>
-                              <ul>
-                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
-                        </div>
+                    <div class = "shadow-box">
+                      <?php if (has_post_thumbnail()) {?>
+                        <a rel="noopener"  href = "<?php the_permalink();?> "><img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>" class="thumbnail"></a>
                       <?php } ?>
 
-                      <div class = "card-content">
-                        <?php if (has_post_thumbnail() == false) {?>
-                          <!-- Sharing Button -->
-                          <div style = "position: relative; margin-top:10px;" class="fixed-action-btn horizontal click-to-toggle pull-right <?php if (has_post_thumbnail()) echo "social-btn-thumbnail"?>">
-                              <a rel="noopener"  class="btn-floating btn-large social-btn-share">
-                                <i class="fa fa-share-alt"></i>
-                              </a>
-                              <ul>
-                                <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
-                              </ul>
-                          </div>
-                        <?php } ?>
-                        <h1><a rel="noopener"  class = "link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
-                        <p><?php the_excerpt();?></p>
+                      <!-- Sharing Button -->
+                      <div class="share-btn fixed-action-btn horizontal click-to-toggle pull-right <?php if (!has_post_thumbnail()) echo "social-btn-thumbnail share-no-thumbnail"?>">
+                          <a rel="noopener"  class="btn-floating btn-large social-btn-share">
+                            <i class="fa fa-share-alt"></i>
+                          </a>
+                          <ul>
+                            <li><a rel="noopener"  href = "https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="btn-floating social-btn-facebook"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a rel="noopener"  href = "https://twitter.com/home?status=<?php the_permalink();?>" class="btn-floating social-btn-twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a rel="noopener"  href = "https://plus.google.com/share?url=<?php the_permalink();?>" class="btn-floating social-btn-google-plus"><i class="fa fa-google-plus"></i></a></li>
+                          </ul>
+                      </div>
+
+                      <div class = "content-wrapper <?php if (!has_post_thumbnail()) echo "content-wrapper-no-thumbnail"?>">
+                        <h1 class= "title"><a rel="noopener"  class = "excerpt link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <p class = "subtitle"><?php the_category(' ')?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
+                        <span class = "excerpt"><?php the_excerpt();?></span>
                       </div>
                     </div>
+
                   </div>
                 <?php
                   }
