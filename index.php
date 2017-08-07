@@ -61,7 +61,7 @@
                       </div>
 
                       <div class = "content-wrapper <?php if (!has_post_thumbnail()) echo "content-wrapper-no-thumbnail"?>">
-                        <h1 class= "title"><a rel="noopener"  class = "excerpt link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1>
+                        <a rel="noopener"  href = "<?php the_permalink();?> "><h1 class= "title"><a rel="noopener"  class = "excerpt link-no-colour link-no-decorate" href = "<?php the_permalink() ?>"><?php the_title();?></a></h1></a>
                         <p class = "subtitle"><?php the_category(' ')?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
                         <span class = "excerpt"><?php the_excerpt();?></span>
                       </div>
