@@ -1,6 +1,11 @@
 .single-parallax-container
 {
   margin-top:-6px;
+
+  @media (max-width: 992px)
+  {
+    margin-top: -14px;
+  }
 }
 
 .single-parallax-container > .parallax > .overlay
