@@ -2,19 +2,34 @@
 <?php get_header()?>
 
 <main <?php body_class()?>>
+  <?php the_post(); ?>
 
-  <!-- Post Thumbnail  -->
-  <?php the_post(); if (has_post_thumbnail()) { ?>
+  <?php if (has_post_thumbnail() && has_post_format('image') ) {?>
+    <div class="single-parallax-container parallax-container">
+      <div class="parallax">
+        <img alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>">
+        <div class = "overlay"></div>
+        <div class = "content">
+          <h1 class = "title"><?php the_title();?></h1>
+          <p class = "subtitle"><?php the_category(' ')?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
+        </div>
+      </div>
+    </div>
+  <?php } ?>
+  <!-- Post Thumbnail For Standard Post -->
+  <?php if (has_post_thumbnail() && !has_post_format('image')) { ?>
     <div class="single-container-img">
       <img class = "responsive-img" alt = "<?php the_title() ?>" src = "<?php the_post_thumbnail_url()?>">
     </div>
   <?php } ?>
 
   <div id = "post-<?php the_ID(); ?>" <?php post_class('single-container'); ?>>
+    <?php if (!has_post_format('image')) {?>
     <div class = "row title">
       <h1><?php the_title();?></h1>
-      <p class = "subtitle"><?php the_category(' ')?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
+      <p class = "subtitle"><?php the_category(' ');?> | <?php the_date('F jS, Y');?> | <?php the_author();?></p>
     </div>
+    <?php } ?>
 
     <div class = "row content">
       <?php the_content();?>

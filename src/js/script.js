@@ -18,6 +18,7 @@ $('.headernav-button-collapse').sideNav(
 // Init Parallax Effect for Page page
 $(document).ready(function(){
   $('#page-parallax').parallax();
+  $('.parallax').parallax();
   $('.social-tooltipped').tooltip({delay: 50});
 });
 

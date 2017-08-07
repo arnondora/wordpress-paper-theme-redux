@@ -9,6 +9,7 @@ function papertheme_theme_setup()
   add_theme_support('html5', array('search-form', 'comment-list', 'comment-form'));
   add_theme_support( 'automatic-feed-links' );
   add_theme_support('title-tag');
+  add_theme_support( 'post-formats', array("image") );
 
   //Register Nav Menu
   register_nav_menu('primary', 'Sidebar Navigation');
