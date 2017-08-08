@@ -3,31 +3,38 @@
 <main <?php body_class()?>>
   <?php
     // The categories will be print in order
-    $categories = [2,4,3];
+    $categories = ['2','3','5'];
     $categories = array_merge([null], $categories)
   ?>
   <div class = "home-container">
 
       <?php foreach( $categories as $category ){ ?>
         <div class = "page-section-wrapper">
-          <h1 class = "category-description"> <?php if ($category == null) echo "Latest"; else echo $category; ?> </h1>
+
+          <?php
+            if ($category != null) $categoryName = wp_get_post_categories( $category );
+            $postQueryArgs = array(
+              'post_type' => 'post',
+              'cat' =>  $category,
+              'posts_per_page' => 3,
+              'no_found_rows'  => true, // We don't need pagination so this speeds up the query
+            );
+
+            $queriedPosts = new WP_Query( $postQueryArgs );
+
+            // Counter
+            $i = 0;
+
+            if ($queriedPosts->have_posts()) {
+          ?>
+
+          <div class = "section-info">
+            <h1 class = "category-description"> <?php if ($category == null) echo "Latest"; else echo get_cat_name($category); ?> </h1>
+            <?php if($category != null) {?> <a class = "see-more-button" href = "<?php echo get_category_link($category)?>">See more</a> <?php } ?>
+          </div>
+
           <section class = "section-wrapper" category = "<?php if ($category == null) echo "latest"; else echo $category; ?> ">
-            <?php
-              if ($category != null) $categoryName = wp_get_post_categories( $category );
-              $postQueryArgs = array(
-                'post_type' => 'post',
-                'cat' =>  $category,
-                'posts_per_page' => 4,
-                'no_found_rows'  => true, // We don't need pagination so this speeds up the query
-              );
 
-              $queriedPosts = new WP_Query( $postQueryArgs );
-
-              // Counter
-              $i = 0;
-
-              if ($queriedPosts->have_posts()) {
-            ?>
               <!-- Manipulate Post Here -->
               <?php while( $queriedPosts->have_posts() ){ ?>
                 <?php ++$i; $queriedPosts->the_post(); ?>
@@ -59,7 +66,7 @@
 
                 </div>
 
-                <?php if ($i == 1 || $i == 4) { echo "</div>"; }?>
+                <?php if ($i == 1 || $i == 3) { echo "</div>"; }?>
               <?php } ?>
 
             <?php } ?> <!-- End Query IF -->
@@ -67,6 +74,23 @@
         </div>
       <?php } ?>
 
+      <section class = "more-cat-section">
+        <h1>More Categories</h1>
+        <div class = "more-cat-wrapper">
+          <?php
+            $categories =  get_categories( array(
+              'parent'  => 0
+              )
+            );
+            foreach  ($categories as $category) { ?>
+              <div class = "more-cat-item">
+                <a href='<?php echo get_category_link( $category->term_id ); ?>'> <?php echo $category->cat_name; ?></a>
+              </div>
+            <?php } ?>
+        </div>
+      </section>
+
+    </div>
   </div>
 </main>
 
