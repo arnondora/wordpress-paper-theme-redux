@@ -19,16 +19,16 @@ add_action('init', 'papertheme_theme_setup');
 //Function for enqueue all assets (including related stylesheet and javascript)
 function papertheme_enquque_assets()
 {
-  wp_register_style('papertheme_style', get_template_directory_uri() . '/dist/css/PaperTheme.css', array(),'1.2.3', all);
-  wp_register_style('papertheme_font_awesome', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.min.css', array(),'1.2.3', all);
-  wp_register_style('papertheme_font', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700', array(),'1.2.3', all);
+  wp_register_style('papertheme_style', get_template_directory_uri() . '/dist/css/PaperTheme.css', array(),'1.3.0', all);
+  wp_register_style('papertheme_font_awesome', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.min.css', array(),'1.3.0', all);
+  wp_register_style('papertheme_font', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700', array(),'1.3.0', all);
   wp_enqueue_style('papertheme_font');
   wp_enqueue_style('papertheme_font_awesome');
   wp_enqueue_style('papertheme_style');
 
   // wp_register_script('papertheme_font_loader', 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js', array(),'1.2', true);
-  wp_register_script('papertheme_script', get_template_directory_uri() . '/dist/js/PaperTheme.js', array(),'1.2.2', true);
-  wp_register_script('papertheme_amp', 'https://cdn.ampproject.org/v0.js', array(),'1.2', true);
+  wp_register_script('papertheme_script', get_template_directory_uri() . '/dist/js/PaperTheme.js', array(),'1.3.0', true);
+  wp_register_script('papertheme_amp', 'https://cdn.ampproject.org/v0.js', array(),'1.3.0', true);
   // wp_enqueue_script('papertheme_font_loader');
   wp_enqueue_script('papertheme_script');
   wp_enqueue_script('papertheme_amp');
