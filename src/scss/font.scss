@@ -35,6 +35,16 @@ blockquote > p > strong
   font-weight: 400;
 }
 
+code
+{
+  background-color: #f2f2f2;
+
+  display: block;
+  padding: 10px 0px 10px 15px;
+  color: #222222;
+  font-family: $font-family-stack;
+}
+
 strong
 {
   font-weight: 700;
